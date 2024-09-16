@@ -1,4 +1,4 @@
 # Command to generate load on the ALB
 
 ***replace with your alb dns name***
-```for i in {1..200}; do curl http://your-alb-address.com & done; wait```
+```for i in {1..200}; do curl ALB1-1100301670.us-east-1.elb.amazonaws.com & done; wait```
