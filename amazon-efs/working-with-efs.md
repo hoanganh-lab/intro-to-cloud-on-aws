@@ -24,7 +24,7 @@ mkdir ~/efs-mount-point
 2. Install NFS client
 sudo yum -y install nfs-utils
 3. Mount using the EFS client
-sudo mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport fs-0b4d361d904de3528.efs.us-east-1.amazonaws.com
+sudo mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport fs-0b4d361d904de3528.efs.us-east-1.amazonaws.com:/ ~/efs-mount-point
 4. Create a file on the file system
 5. Add a file system policy to enforce encryption in-transit
 6. Unmount (make sure to change directory out of efs-mount-point first)
@@ -35,4 +35,4 @@ sudo umount ~/efs-mount-point
 1. Install EFS utils
 sudo yum install -y amazon-efs-utils
 2. Mount using the EFS mount helper
-sudo mount -t efs -o tls fs-0b4d361d904de3528.efs.us-east-1.amazonaws.com
+sudo mount -t efs -o tls fs-0b4d361d904de3528.efs.us-east-1.amazonaws.com:/ ~/efs-mount-point
